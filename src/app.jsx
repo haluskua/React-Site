@@ -3,7 +3,7 @@ import Button from "./button/button";
 import styles from "./styles/main.scss";
 import FancyButton from "./fancy-button/fancy-button";
 import Navbar from "./components/nav-bar";
-const content = "Hello world!";
+const content = "Hello sometimes!";
 
 const App = () => (
   <Fragment>
