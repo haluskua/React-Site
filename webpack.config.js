@@ -38,7 +38,18 @@ module.exports = {
               localIdentName: '[local]___[hash:base64:5]'
             }
           },
-        'sass-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: 'postcss.config.js'
+              }
+            }
+          },
+          {
+            loader: 'sass-loader', options: { sourceMap: true }
+          },
         ]
       },
       {
@@ -71,3 +82,4 @@ module.exports = {
     port: 9000
   }
 };
+
