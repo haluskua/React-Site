@@ -23,6 +23,12 @@ module.exports = {
         },
       },
       {
+        test: /\.(jpg|png|svg|gif|)$/,
+        use: {
+          loader: "url-loader",
+        },
+      },
+      {
         test: /\.(scss|sass|css)$/,
         exclude: /node_modules/,
         loaders: [
@@ -64,6 +70,7 @@ module.exports = {
   resolve: {
     extensions: ["*", ".js", ".jsx"],
   },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
@@ -75,6 +82,7 @@ module.exports = {
       chunkFilename: devMode ? "[id].css" : "[id].[hash].css",
     }),
   ],
+
   devServer: {
     contentBase: DIST_DIR,
     hot: true,
